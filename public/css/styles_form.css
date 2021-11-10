@@ -1,0 +1,30 @@
+/* -- Form -- */
+.formulario{
+    padding: 20px;
+}
+.control-form{
+    margin-bottom: 10px;
+    display: block;
+}
+.control{
+    width: 100vw;
+    padding: 15px;
+}
+.button-form{
+    background-color: #39b54a;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* ejemplo de pseudo selector con input */
+input{
+    border: 2px solid currentColor;
+}
+input::invalid{
+    border: 2px dashed red;
+}
+input::invalid-function{
+    background-image: linear-gradient(pink, lightgreen);
+}

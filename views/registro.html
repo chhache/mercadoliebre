@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet">
+    <link rel="stylesheet" href="css/registar.css">
+</head>
+    <body>        
+<!-- action y method deben coincidir con el código y método detallado en app.post en app.js -->
+<!-- Etiqueta form + atributo action define donde viaja la data(/..)) + atributo method define en que formato se envía la información (POST/GET)-->
+<form class="formulario" action="/register" method="post">
+<div>
+    <!-- label -> etiqueta semántica correcta para def form -->
+    <label for="nombre_apellido">Nombre y apellido</label>
+    <input class="control" type="text" id="nombre_apellido" name="nombre" minlength="10">
+    <input type="text" id="nombre_apellido" name="apellido">
+    <!-- name importante para obtener los datos por GET o POST -->
+</div>    
+<div>
+    <label for="usuario">Usuario</label>
+    <input type="text" id="usuario" name="usuario" placeholder="">
+</div>
+<div>
+    <label for="fechan_nacimiento">Fecha Nacimiento</label>
+    <input type="date" id="fecha_nacimiento" name="fechaNacimiento" placeholder="dd/mm/aaaa">
+</div>
+<div>
+    <label for="Domicilio">Usuario</label>
+    <input type="text" id="domicilio" name="calle" placeholder="Calle">
+</div>
+<div>
+    <label for="profile">Perfil</label>
+    <select name="perfiles" id="profile">
+        <option value="vendedor">Vendedor</option>
+        <option value="comprador">Comprador</option>
+    </select>
+</div>
+
+
+<label for="interes">Categorías de Interes</label>
+<label for="electro">Electro</label>
+<input type="checkbox" id="electro" name="electro">
+<label for="interes">Moda</label>
+<input type="checkbox" id="moda" name="moda">
+<label for="hogar">Hogar</label>
+<input type="checkbox" id="hogar" name="hogar">
+<label for="jugueteria">Juguetería</label>
+<input type="checkbox" id="jugueteria" name="jugueteria">
+<label for="vida_sana">Vida Sana</label>
+<input type="checkbox" id="vida_sana" name="vida_sana">
+
+    
+<label for="email">Ingrese Email</label>
+<input type="email"id="email" name="email">
+<label for="password">Ingrese Password</label>
+<input type="password" id ="password" name="password">
+
+<div>
+    <button type="submit" value="enviar">Enviar</button><br> 
+</div>
+<div>
+    <button type="reset" value="cancelar">Cancelar</button><br>
+</div>   
+
+
+
+<!-- <input type="submit" value="Enviar"> -->
+<!-- submit boton de envio de datos (al destino definido en la etiqueta form action= -->
+    
+<!-- <input type="submit" value="Enviar"> -->
+<input type="checkbox">
+<!-- 
+<textarea name="" id="" cols="30" rows="10"></textarea> -->
+<!-- 
+<select name="colores" id="">
+    <option value="red">Rojo</option>
+    <option value="green">Verde</option>
+</select> -->
+
+</form>    
+
+</body>
