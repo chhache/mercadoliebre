@@ -9,80 +9,73 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet">
-    <link rel="stylesheet" href="css/registar.css">
+    <link rel="stylesheet" href="css/registro.css">
 </head>
-    <body>        
-<!-- action y method deben coincidir con el código y método detallado en app.post en app.js -->
-<!-- Etiqueta form + atributo action define donde viaja la data(/..)) + atributo method define en que formato se envía la información (POST/GET)-->
-<form class="formulario" action="/register" method="post">
-<div>
-    <!-- label -> etiqueta semántica correcta para def form -->
-    <label for="nombre_apellido">Nombre y apellido</label>
-    <input class="control" type="text" id="nombre_apellido" name="nombre" minlength="10">
-    <input type="text" id="nombre_apellido" name="apellido">
-    <!-- name importante para obtener los datos por GET o POST -->
-</div>    
-<div>
-    <label for="usuario">Usuario</label>
-    <input type="text" id="usuario" name="usuario" placeholder="">
-</div>
-<div>
-    <label for="fechan_nacimiento">Fecha Nacimiento</label>
-    <input type="date" id="fecha_nacimiento" name="fechaNacimiento" placeholder="dd/mm/aaaa">
-</div>
-<div>
-    <label for="Domicilio">Usuario</label>
-    <input type="text" id="domicilio" name="calle" placeholder="Calle">
-</div>
-<div>
-    <label for="profile">Perfil</label>
-    <select name="perfiles" id="profile">
-        <option value="vendedor">Vendedor</option>
-        <option value="comprador">Comprador</option>
-    </select>
-</div>
+    <body> 
+        <main>      
+    <!-- action y method deben coincidir con el código y método detallado en app.post en app.js -->
+    <!-- Etiqueta form + atributo action define donde viaja la data(/..)) + atributo method define en que formato se envía la información (POST/GET)-->
+    <div class="container">
+        <div class="login-container">
+            <div class="register">
+                <h2>Registrarse</h2>
+                    <form action="/register" method="post">    
+                        <input type="text" placeholder="Nombre y Apellido" class="nombre">
+                        <input type="text" placeholder="Usuario" class="usuario"> 
+                        <input type="text" placeholder="Email" class="correo">
+                        <input type="password" placeholder="Contraseña" class="pass">
+                        <input type="password" placeholder="Confirmar contraseña" class="repass">
+                        
+                        <div>
+                            <label class="register__label" for="fecha_nacimiento">Fecha Nacimiento</label>
+                            <input type="date" id="fecha_nacimiento" name="fechaNacimiento" placeholder="dd/mm/aaaa">
+                        </div>
+                        <input type="text" id="domicilio" name="calle" placeholder="Domicilio">
+                        <div class="radio">
+                            <label class="register__label" for="profile">Perfil</label><br><br>
+                            <label for="vendedor">Vendedor</label>    
+                            <input type="radio" name="profile" value="vendedor">        
+                            
+                            <label for="comprador">Comprador</label>
+                            <input type="radio" name="profile" value="comprador">
+                              
+                        </div>
+                        <div class="checkbox">
+                            <label class="register__label" for="interes">Categorías de Interes</label><br><br>
+                    
+                            <label for="electro">Electro</label>
+                            <input type="checkbox" id="electro" name="electro">
+                            
+                            <label for="interes">Moda</label>
+                            <input type="checkbox" id="moda" name="moda">
+                            
+                            <label for="hogar">Hogar</label>
+                            <input type="checkbox" id="hogar" name="hogar">
+                            <label for="jugueteria">Juguetería</label>
+                            <input type="checkbox" id="jugueteria" name="jugueteria">
+                            <label for="vida_sana">Vida Sana</label>
+                            <input type="checkbox" id="vida_sana" name="vida_sana">
+                        </div> 
+                        
 
+                        <input type="submit" class="submit" value="REGISTRARSE">
+                        <!-- <input type="reset" class="reset" value="CANCELAR"> -->
+                    
+                    </form>
+            </div>
+            <!-- <div class="login">
+                <h2>Iniciar Sesión</h2>
+                  <div class="login-items">
+                    <button class="fb"><i class="fab fa-facebook-f"></i>   Facebook</button>
+                    <button class="tw"><i class="fab fa-twitter"></i>   Twitter</button>
+                    <button class="correo"><i class="fas fa-envelope"></i>   Correo</button>    
+                </div>
+            </div> -->
+            </div>
+            </div>              
 
-<label for="interes">Categorías de Interes</label>
-<label for="electro">Electro</label>
-<input type="checkbox" id="electro" name="electro">
-<label for="interes">Moda</label>
-<input type="checkbox" id="moda" name="moda">
-<label for="hogar">Hogar</label>
-<input type="checkbox" id="hogar" name="hogar">
-<label for="jugueteria">Juguetería</label>
-<input type="checkbox" id="jugueteria" name="jugueteria">
-<label for="vida_sana">Vida Sana</label>
-<input type="checkbox" id="vida_sana" name="vida_sana">
-
-    
-<label for="email">Ingrese Email</label>
-<input type="email"id="email" name="email">
-<label for="password">Ingrese Password</label>
-<input type="password" id ="password" name="password">
-
-<div>
-    <button type="submit" value="enviar">Enviar</button><br> 
-</div>
-<div>
-    <button type="reset" value="cancelar">Cancelar</button><br>
-</div>   
-
-
-
-<!-- <input type="submit" value="Enviar"> -->
-<!-- submit boton de envio de datos (al destino definido en la etiqueta form action= -->
-    
-<!-- <input type="submit" value="Enviar"> -->
-<input type="checkbox">
-<!-- 
-<textarea name="" id="" cols="30" rows="10"></textarea> -->
-<!-- 
-<select name="colores" id="">
-    <option value="red">Rojo</option>
-    <option value="green">Verde</option>
-</select> -->
-
-</form>    
-
-</body>
+            </form>  
+        </main>   
+    </body>
+</html>
+<!-- https://youtu.be/1-4RgF7AZJw -->

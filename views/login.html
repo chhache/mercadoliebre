@@ -10,9 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet">
     <link rel="stylesheet" href="css/login.css">
-</head><form action="/login" method="post">
+</head>
     <body>
-    <!-- <label for="usuario">Usuario</label>
+        <form action="/login" method="post"></form>
+        <div>
+            <!-- label -> etiqueta semántica correcta para def form -->
+            <label for="nombre_apellido">Nombre y apellido</label>
+            <input class="control" type="text" id="nombre_apellido" name="nombre" minlength="10">
+            <input type="text" id="nombre_apellido" name="apellido">
+            <!-- name importante para obtener los datos por GET o POST -->
+        </div> 
+        
+    
+    
+        <!-- <label for="usuario">Usuario</label>
     <input type="text" id="usuario" name="usuario"> 
     name importante para obtener los datos por GET o POST -->
 
